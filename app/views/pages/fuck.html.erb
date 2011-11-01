@@ -1,0 +1,7 @@
+<h1>This is the MainHeader. - Page </h1>
+
+<div id="content">
+	<%= raw Page.find(params[:id].gsub('_','-') ).content_for(:body) %>
+
+</div>
+<h1> Footer </h1>

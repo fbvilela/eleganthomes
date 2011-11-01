@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= image_tag @home.image.url%></p>
+<p>
+  <b>Suburb:</b>
+  <%= @home.suburb %>
+</p>
+
+<p>
+  <b>Heading:</b>
+  <%= @home.heading %>
+</p>
+
+<p>
+  <b>Short description:</b>
+  <%= @home.short_description %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @home.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @home.price %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @home.size %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @home.width %>
+</p>
+
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>

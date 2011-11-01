@@ -1,0 +1,91 @@
+/*
+  Override default refinery homepage styles here.
+  These only apply to the homepage of your site.
+*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+*{font-family:arial,helvetica,sans-serif,tahoma,verdana,geneva,lucida,"lucida grande";}
+
+
+
+p {
+	font: Arial, Helvetica, sans-serif;	
+}
+
+a { text-decoration: none; outline: none; }
+
+
+.clear{
+	clear: both;	
+}	
+
+.container{
+	width: 285px;
+	height: 167px;
+	padding: 3px;
+	background-color: #ebebeb;
+}
+
+p.house-img{
+	display: block;
+	width: 285px;
+	height: 167px;
+	/**background: #ebebeb url(../images/house-img.png) no-repeat;*/
+	margin: 0 auto;
+}
+
+p.house-img:hover{
+	opacity: 0.65;
+}
+div.container-info{
+	margin: -72px 0 0 0;	
+}
+
+ul {
+	list-style-type: none;
+	display: inline;
+	float: left;
+	margin: 0 0 0 0px;
+}
+
+ul:hover{
+	opacity: 0.65;
+}
+
+ul li {
+	margin-left: -40px;
+}
+
+
+ul li.title {
+	font-size: 24px;
+	margin-bottom: 8px;
+	color: #000;
+
+}
+
+ul li.price {
+	font-size: 16px;
+	color: #555555;
+}	
+
+ul li.square {
+	font-size: 16px;
+	color: #555555;
+}
+
+
+p.more-details-btn {
+	display: inline;
+	float: right;
+	width: 127px;
+	height: 24px;
+	background: url(../images/more-details-btn.png);
+	margin-top: 35px;
+}
+
+p.more-details-btn:hover{
+	opacity: 0.65;
+}

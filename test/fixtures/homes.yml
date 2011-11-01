@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  suburb: MyString
+  heading: MyString
+  short_description: MyText
+  description: MyText
+  price: 1
+  size: 1
+  width: 1
+
+two:
+  suburb: MyString
+  heading: MyString
+  short_description: MyText
+  description: MyText
+  price: 1
+  size: 1
+  width: 1
