@@ -1,0 +1,7 @@
+
+<div id="images-container">
+ <% @packages.each do |package| %>
+    <%= render :partial => "item" , :locals => { :package => package} %>
+ <% end %>
+</div>
+ 

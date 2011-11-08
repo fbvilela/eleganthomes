@@ -7,8 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="container">
+	<%= render :file => "shared/_header"%>
+	
+	<div id="content">
+		<%= yield %>
+	</div>
+	
+	<%= render :file => "shared/_footer"%>
+	
+  </div>
 </body>
 </html>

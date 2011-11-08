@@ -1,7 +1,9 @@
 Eleganthomes::Application.routes.draw do
+  resources :packages
+
   resources :homes
   
-  match "/pages/:id" => 'high_voltage/pages#show', :as => :page, :format => false
+  match "/pages/:id" => 'high_voltage/pages#show', :as => :page, :format => false, :layout => "page"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

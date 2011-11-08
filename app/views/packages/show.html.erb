@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Suburb:</b>
+  <%= @package.suburb %>
+</p>
+
+<p>
+  <b>Heading:</b>
+  <%= @package.heading %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @package.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>

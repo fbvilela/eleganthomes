@@ -1,7 +1,4 @@
-<h1>This is the MainHeader. - Page </h1>
+<h2>Trying to modify it... </h2>
 
-<div id="content">
-	<%= raw Page.find(params[:id].gsub('_','-') ).content_for(:body) %>
-
-</div>
-<h1> Footer </h1>
+<%= @page = Page.find(params[:id].gsub('_','-') )  %>
+<%= raw @page.content_for(:body) if @page %>

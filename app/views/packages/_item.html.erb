@@ -1,0 +1,14 @@
+<div class="img-area">
+ <div class="img-container">
+  <a href="<%= package_path(package) %>"><img src="images/house-and-land-img.jpg" width="140" height="105" class="house-img" /></a>
+ 	<p class="house-title"><%= link_to package.heading , package %></p>
+	 <ul class="house-description"><a href="#">
+	   <li><%= package.heading %></li>
+	   <li><%= package.suburb %></li>
+	   <li>From $300,00</li>
+ 	 </ul>
+  </a>
+  <p class="details-btn"><%= link_to "Details", package %></p>
+ </div>
+ <p class="reflection"></p>
+</div>

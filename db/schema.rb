@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111023045654) do
+ActiveRecord::Schema.define(:version => 20111106053435) do
 
   create_table "homes", :force => true do |t|
     t.string   "suburb"
@@ -39,6 +39,22 @@ ActiveRecord::Schema.define(:version => 20111023045654) do
     t.datetime "updated_at"
     t.string   "image_uid"
     t.string   "image_ext"
+  end
+
+  create_table "packages", :force => true do |t|
+    t.string   "suburb"
+    t.string   "heading"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
   end
 
   create_table "page_part_translations", :force => true do |t|
