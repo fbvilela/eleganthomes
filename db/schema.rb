@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111106053435) do
+ActiveRecord::Schema.define(:version => 20111109120121) do
 
   create_table "homes", :force => true do |t|
     t.string   "suburb"
@@ -55,6 +55,11 @@ ActiveRecord::Schema.define(:version => 20111106053435) do
     t.string   "pdf_content_type"
     t.integer  "pdf_file_size"
     t.datetime "pdf_updated_at"
+    t.integer  "price"
+    t.integer  "land_size"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.integer  "storeys"
   end
 
   create_table "page_part_translations", :force => true do |t|

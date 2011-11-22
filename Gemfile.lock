@@ -52,6 +52,8 @@ GEM
     high_voltage (1.0.1)
     i18n (0.5.0)
     json (1.6.1)
+    kaminari (0.12.4)
+      rails (>= 3.0.0)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -157,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   high_voltage
+  kaminari
   paperclip
   pg
   rails (= 3.0.10)

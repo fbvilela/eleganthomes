@@ -9,7 +9,7 @@ gem 'pg'
 gem 'paperclip'
 gem 'refinerycms'
 gem 'high_voltage'
-
+gem 'kaminari'
 
 # Use unicorn as the web server
 # gem 'unicorn'
