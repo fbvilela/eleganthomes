@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.floorplan-container{
+	display: block;
+	float: left;
+	width: 960px;
+	background: #fff;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.down-arrow-floorplan{
+	display: block;
+	float:left;
+	width: 55px;
+	height: 24px;
+	background: url(../images/down-arrow.png) no-repeat;
+	margin: 5px 0 0 180px;
+}
