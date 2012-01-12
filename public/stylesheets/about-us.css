@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.about-us-img-mask{
+	display: inline;
+	float: left;
+	width: 440px;
+	height: 300px;
+	overflow: hidden;
+	margin: 20px 20px 0 20px;
+}
+
+
+h2{
+	color:#125697;	
+}
+
+.about-us-desc{
+	display: inline;
+	float: left;
+	width: 460px;
+	height: 320px;
+	margin: 20px 0 0 0px;
+	overflow: scroll;
+	color: #333;
+	font-size: 14px;
+	line-height: 20px;
+}

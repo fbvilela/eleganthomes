@@ -1,0 +1,99 @@
+
+
+/* Gallery styles */
+
+#gallery{
+	box-shadow: 0 0 5px #444444;
+	-webkit-box-shadow: 0 0 5px #444444;
+	-ms-box-shadow: 0 0 5px #444444;
+	-moz-box-shadow: 0 0 5px #444444;
+	-o-box-shadow: 0 0 5px #444444;
+	
+	border: 1px solid #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+
+
+	/* The width of the gallery */
+	width:920px;
+	overflow:hidden;
+}
+
+#slides{
+	
+	/* This is the slide area */
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+
+	height:400px;
+	/* jQuery changes the width later on to the sum of the widths of all the slides. */
+	width:920px;
+	overflow:hidden;
+}
+
+.slide{
+	float:left;
+}
+
+#menu{
+	/* This is the container for the thumbnails */
+	height:24px;
+	margin: 10px auto;
+}
+
+ul.menubar{
+	margin:0px;
+	padding:0px;
+}
+
+li{
+	/* Every thumbnail is a li element */
+	width:24px;
+	display:inline-block;
+	list-style:none;
+	margin-right:5px;
+	height:24px;
+	overflow:hidden;
+	background: url(img/sample_slides/thumb.png) no-repeat;
+}
+
+li.inact:hover{
+	/* The inactive state, highlighted on mouse over */
+	opacity: 0.5;
+}
+
+li.act,li.act:hover{
+	/* The active state of the thumb */
+	background: url(img/sample_slides/thumb-active.png) no-repeat;
+}
+
+li.act a{
+	cursor:default;
+}
+
+
+li a{
+	display:block;
+	height:24px;
+	padding-top:10px;
+}
+
+a img{
+	border:none;
+}
+
+
+
+#main{
+	/* The main container */
+	margin:15px auto;
+	text-align:center;
+	width:920px;
+	position:relative;
+}

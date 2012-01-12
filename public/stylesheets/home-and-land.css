@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#content{
+	display:block;
+	background: url(../images/content-bg.gif) repeat-x;
+	width: 960px;
+	height: 450px;
+	box-shadow: 0 1px 5px #000;
+	-webkit-box-shadow: 0 1px 5px #000;
+	-ms-box-shadow: 0 1px 5px #000;
+	-moz-box-shadow: 0 1px 5px #000;
+	-o-box-shadow: 0 1px 5px #000;
+
+}
+
+.content-top-bar {
+	display: block;
+	height: 57px;
+	background: url(../images/ContentTopBarBg.gif) repeat-x;
+}
+
+.page-title {
+	display: block;
+	float: left;
+	font-size: 24px;
+	color: #f5f5f5;
+	margin: 15px 0 0 15px;
+}
+
+
+#container-search {
+	display: inline;
+	float: left;
+	width: 241px;
+	height: 290px;
+	margin: 15px 0px 0 15px;
+	background: #fff;
+}
+
+.search-title{
+	display: block;
+	font-size: 18px;
+	color: #fff;
+	background: #125697;
+	padding: 5px 0 0 5px;
+	height: 28px;
+}
+
+
+
+
+
+.selection{
+	display: block;
+	width: 241px;
+	height: 25px;
+	margin: 10px 0 0 5px;
+}
+
+.select-title{
+	display: inline;
+	float: left;
+	width: 90px;
+	color: #333;
+	font-size: 16px;
+	margin: 0 0 0 0;
+}
+
+select{
+	display: inline;
+	float: left;
+	font-size: 15px;
+	color: #333;
+	width: 58px;
+}
+
+.to{
+	display: inline;
+	float: left;
+	font-size: 16px;
+	color: #333;
+	margin: 0 5px 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.search-btn-mask{
+	display:block;
+	float: right;
+	width:100px;
+	height:40px;
+	border-left: 1px solid #fff;
+	overflow: hidden;
+	margin: 5px 0 0 0;
+}
+
+
+
+div.search-btn{
+	display:block;
+	width: 200px;
+	height:40px;
+	margin-left:-100px;
+	-webkit-transition:0.4s;
+	-ms-transition:0.4s;
+	-o-transition:0.4s;
+	-moz-transition:0.4s;
+}
+
+
+
+div.search-btn:hover{
+	margin-left:0px;
+}
+
+
+
+p.search-btn{
+	display:inline;
+	float:left;
+	width:100px;
+	height:40px;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	color: #125697;
+	text-align: center;
+	padding-top: 8px;
+}
+
+
+p.search-btn-over{
+	display:inline;
+	float:left;
+	width:100px;
+	height:40px;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	color: #125697;
+	text-align: center;
+	padding-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container-packages{
+	display:inline;
+	float:left;
+	width: 689px;
+	height: 330px;
+	margin: 15px 0 0 15px;
+}
+
+
+.package-thumb{
+	display: inline;
+	float: left;
+	background: #fff;
+	width: 157px;
+	height: 157px;
+	border: 0px solid #999;
+	margin: 0 15px 15px 0;
+	
+	box-shadow: 0 0 2px #444444;
+	-webkit-box-shadow: 0 0 2px #444444;
+	-ms-box-shadow: 0 0 2px #444444;
+	-moz-box-shadow: 0 0 2px #444444;
+	-o-box-shadow: 0 0 2px #444444;
+
+}
+
+
+.package-thumb:hover{
+	box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	-ms-box-shadow: 0 0 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+	-o-box-shadow: 0 0 5px #000;
+	
+}
+
+
+
+.mask-package-img-thumb{
+	display:block;
+	height: 105px;
+	width: 145px;
+	margin: 6px 0 0 6px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+.package-img-thumb{
+	display: block;
+	width: 201px;
+	height: 105px;
+	-webkit-transition:0.3s;
+	-ms-transition:0.3s;
+	-o-transition:0.3s;
+	-moz-transition:0.3s;
+}
+
+.package-img-thumb:hover{
+	margin-left: -54px;	
+}
+
+
+.package-img{
+	display:inline;
+	float: left;
+	margin: 0 2px 0 0;
+}
+
+
+.bed-car-bath-icons{
+	display:inline;
+	float: left;
+	width: 54px;
+	height: 105px;
+	background: url(../images/bed-car-bath-icons.png) no-repeat;
+}
+
+
+.number-of-bedrooms{
+	display: block;
+	float: left;
+	width: 49px;
+	text-align: right;
+	font-size: 16px;
+	margin: 10px 0 0 0;
+}
+
+
+.number-of-cars{
+	display: block;
+	float: left;
+	width: 49px;
+	text-align: right;
+	font-size: 16px;
+	margin: 10px 0 0 0;
+}
+
+
+.number-of-bath{
+	display: block;
+	float: left;
+	width: 49px;
+	text-align: right;
+	font-size: 16px;
+	margin: 10px 0 0 0;
+}
+
+
+
+.package-title{
+	display: block;
+	margin: 5px 0 0 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #125697;
+}
+
+.package-price{
+	display: block;
+	margin: -5px 0 0 5px;
+	font-size: 12px;
+	color: #666;
+}
+
+
+
+.pagination{
+	display:block;
+	float: right;
+	margin: 15px 40px 0 0;
+	color:#125697;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
