@@ -1,0 +1,50 @@
+  <div id="container-overview">
+          
+        	<div class="overview-btn"><a href="#container-overview" onClick="hide_floorplan();"><span>OVERVIEW</span></a></div>
+            <div class="overview-btn"><a href="#container-overview" onClick="show_floorplan();"><span>FLOORPLAN</span></a></div>
+            <div class="go-back-btn"><a href="home-and-land.html"><span>< GO BACK</span></a></div>
+            <div class="clear"></div>
+            <div class="down-arrow" id="arrow"></div>
+          <div id="not-floorplan">
+            <div class="clear"></div>
+            
+            <div class="left-column">
+            	<div class="left-column-title"><%= @object.title %></div>
+                <div class="left-column-desc"><%= @object.description %></div>
+            </div>
+            
+            <div class="central-column-homes">
+            	<div class="central-column-title">Full Turnkey Also Available From: $<%= @object.full_tk_price %></div>
+                <div class="central-column-desc-title">Full Turnkey includes:</div>
+                <div class="central-column-desc">
+                	<ul style="padding-left: 14px">
+                        <% for item in @object.full_tk_inclusions.split(",") %> 
+                            <li><%= item %> </li>
+                        <% end %> 
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="google-maps"><iframe width="295" height="295" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.au/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=melbourne&amp;aq=&amp;sll=-25.335448,135.745076&amp;sspn=62.072022,114.169922&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Melbourne+Victoria&amp;t=m&amp;ll=-37.813361,144.962904&amp;spn=0.006611,0.009849&amp;z=16&amp;output=embed"></iframe></div>
+
+          </div> <!-- non floorplan -->
+               
+          <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><img src="/images/Eudora-26-Fplan.jpg" width="960" /></div>
+</div> <!-- end container overview -->
+
+<script type="text/javascript">
+
+</script>
+
+<script type="text/javascript">
+ function show_floorplan(){
+     document.getElementById("not-floorplan").style.display = 'none';
+     document.getElementById("floorplan-shit").style.display = '';
+     document.getElementById("arrow").style.marginLeft = '180px';
+ }
+ function hide_floorplan(){
+     document.getElementById("not-floorplan").style.display = '';
+     document.getElementById("floorplan-shit").style.display = 'none';
+     document.getElementById("arrow").style.marginLeft = '20px';
+ }
+</script>

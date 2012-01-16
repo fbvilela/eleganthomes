@@ -1,5 +1,5 @@
 <div class="content-top-bar">
-            	<p class="page-title"><span>Lawson, &nbsp;&nbsp; Home &nbsp;&nbsp; & &nbsp;&nbsp; Land &nbsp;&nbsp; (Melton)</span></p>
+            	<p class="page-title"><span><%= @home.title %></span></p>
             </div>
             
             <div class="big-img-mask">
@@ -8,20 +8,22 @@
             </div>
             
             <div class="container-details">
-            	<div class="home-and-land-title">Lot 324 Maplewood Estate Melton (476m2)</div>
-             	<div class="home-and-land-price">Home & Land From: <br /> $362.358</div>
+            	<div class="home-and-land-title"><%= @home.title %> </div>
+             	<div class="home-and-land-price">Price: <br /> $<%= @home.price %></div>
               
              	<div class="container-icons">
               		<img src="/images/bed-icon.png" width="50" height="50" class="little-icon" />
-                	<div class="bedrooms">3</div>
+                	<div class="bedrooms"><%= @home.bedrooms %> </div>
                 	<img src="/images/shower-icon.png" width="50" height="50" class="little-icon" />
-                	<div class="shower">2</div>
+                	<div class="shower"><%= @home.bathrooms %></div>
                 	<img src="/images/car-icon.png" width="50" height="50" class="little-icon" />
-                	<div class="garage">2</div>
-                    <div class="extra-info">- 24 Squares</div>
-                    <div class="extra-info">- Spacious Living Areas</div>
+                	<div class="garage"><%= @home.car_parks %></div>
+
+                  <% for item in @home.feature_list.split(",") %> 
+                    <div class="extra-info">- <%= item %> </div>
+                  <% end %>   
               	</div> <!-- end container icons  -->
                 
-                <div class="download-pdf-btn"><a href="#" target="_blank">Download PDF</a></div>
+                <div class="download-pdf-btn"><%= link_to "Download PDF", @home.pdf.url , :target => "_blank" %> </div>
             
 </div><!-- end container details -->

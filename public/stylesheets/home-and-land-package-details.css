@@ -252,7 +252,7 @@
 ul{
 	display:block;
 	float: left;
-	margin-left: 15px;
+	width: 200px;
 }
 
 ul li{

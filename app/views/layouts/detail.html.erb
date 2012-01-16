@@ -7,6 +7,7 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <% @object = @package || @home %> 
 	<div id="top-nav-bg"></div>
 	
   <div id="container">
@@ -17,7 +18,7 @@
 	</div>
 
 	<div id="content-shadow"></div>
-	<%= render :file => "shared/_detailed_footer"%>
+	<%= render :file => "shared/_#{@object.class.name.downcase}_detailed_footer"%>
 
   </div>
 

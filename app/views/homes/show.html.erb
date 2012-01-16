@@ -2,18 +2,17 @@
 
 <p><%= image_tag @home.image.url(:thumb)%></p>
 <p>
-  <b>Suburb:</b>
-  <%= @home.suburb %>
+
 </p>
 
 <p>
-  <b>Heading:</b>
-  <%= @home.heading %>
+  <b>Title:</b>
+  <%= @home.title %>
 </p>
 
 <p>
   <b>Short description:</b>
-  <%= @home.short_description %>
+  <%= @home.feature_list %>
 </p>
 
 <p>
@@ -26,15 +25,9 @@
   <%= @home.price %>
 </p>
 
-<p>
-  <b>Size:</b>
-  <%= @home.size %>
-</p>
 
-<p>
-  <b>Width:</b>
-  <%= @home.width %>
-</p>
+
+
 
 
 <%= link_to 'Edit', edit_home_path(@home) %> |

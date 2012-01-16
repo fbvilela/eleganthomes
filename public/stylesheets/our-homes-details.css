@@ -230,19 +230,6 @@
 }
 
 
-ul{
-	display:block;
-	float: left;
-	margin-left: 15px;
-}
-
-ul li{
-	color: #333;
-	font-size: 14px;
-}
-
-
-
 
 .right-column{
 	display:inline;

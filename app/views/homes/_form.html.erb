@@ -1,51 +1,61 @@
-<%= form_for @home, :html => {:multipart => true } do |f| %>
-  <% if @home.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h2>
-
-      <ul>
-      <% @home.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :suburb %><br />
-    <%= f.text_field :suburb %>
-  </div>
-  <div class="field">
-    <%= f.label :heading %><br />
-    <%= f.text_field :heading %>
-  </div>
-  <div class="field">
-    <%= f.label :short_description %><br />
-    <%= f.text_area :short_description %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :size %><br />
-    <%= f.text_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :width %><br />
-    <%= f.text_field :width %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <div>
-  
+<%= form_for @home , :html => {:multipart => true } do |f| %>
+<% if @home.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h2>
+	<ul>
+		<% @home.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
 <% end %>
+<div id="container-form">
+	<div class="form">
+		<h6>Title:</h6><%= f.text_field :title %>
+	</div>
+	<div class="form-medium">
+		<h5>Price:</h5><%= f.text_field :price %>
+	</div>
+	<div class="form-small">
+		<h5>Bedrooms:</h5><%= f.text_field :bedrooms %>
+	</div>
+	<div class="form-small">
+		<h5>Bathrooms:</h5><%= f.text_field :bathrooms %>
+	</div>
+	<div class="form-small">
+		<h5>Garage:</h5><%= f.text_field :car_parks %>
+	</div>
+</div>
+<!-- end container form -->
+<div id="container-form">
+	<div class="form">
+		<h6>Details List:</h6><%= f.text_field :feature_list %>
+	</div>
+	<div class="form">
+		<h6>Overview Description:</h6><%= f.text_field :description %>
+	</div>
+	<div class="form">
+		<h6>Full Turnkey Inclusions:</h6><%= f.text_field :inclusions_list %>
+	</div>
+
+</div>
+<!-- end container form -->
+<div class="save-btn">
+	<%= f.submit %>
+</div>
+<div class="uploading-container">
+	<div class="field">
+		<%= f.label :image %>
+		<br />
+		<%= f.file_field :image %>
+	</div>
+	<div class="field">
+		<%= f.label :pdf %>
+		<br />
+		<%= f.file_field :pdf %>
+		<%= f.file_field :floorplan %>
+	</div>
+</div>
+<% end %> 

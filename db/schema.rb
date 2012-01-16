@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120115085147) do
+ActiveRecord::Schema.define(:version => 20120116110912) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -30,13 +30,10 @@ ActiveRecord::Schema.define(:version => 20120115085147) do
   end
 
   create_table "homes", :force => true do |t|
-    t.string   "suburb"
-    t.string   "heading"
-    t.text     "short_description"
+    t.string   "title"
+    t.text     "feature_list"
     t.text     "description"
     t.integer  "price"
-    t.integer  "size"
-    t.integer  "width"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -46,6 +43,15 @@ ActiveRecord::Schema.define(:version => 20120115085147) do
     t.integer  "car_parks"
     t.integer  "bathrooms"
     t.integer  "bedrooms"
+    t.string   "floorplan_file_name"
+    t.string   "floorplan_content_type"
+    t.integer  "floorplan_file_size"
+    t.datetime "floorplan_updated_at"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+    t.text     "inclusions_list"
   end
 
   create_table "images", :force => true do |t|
@@ -62,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20120115085147) do
 
   create_table "packages", :force => true do |t|
     t.string   "suburb"
-    t.string   "heading"
+    t.string   "title"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -80,6 +86,15 @@ ActiveRecord::Schema.define(:version => 20120115085147) do
     t.integer  "bathrooms"
     t.integer  "storeys"
     t.integer  "car_parks"
+    t.integer  "lot_number"
+    t.string   "region"
+    t.integer  "full_tk_price"
+    t.text     "feature_list"
+    t.text     "full_tk_inclusions"
+    t.string   "floorplan_file_name"
+    t.string   "floorplan_content_type"
+    t.integer  "floorplan_file_size"
+    t.datetime "floorplan_updated_at"
   end
 
   create_table "page_part_translations", :force => true do |t|

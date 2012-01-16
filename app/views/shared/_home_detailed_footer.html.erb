@@ -1,0 +1,56 @@
+
+  <div id="container-overview">
+          
+        	<div class="overview-btn"><a href="#container-overview" onClick="hide_floorplan();"><span>OVERVIEW</span></a></div>
+            <div class="overview-btn"><a href="#container-overview" onClick="show_floorplan();"><span>FLOORPLAN</span></a></div>
+            <div class="go-back-btn"><a href="home-and-land.html"><span>< GO BACK</span></a></div>
+            <div class="clear"></div>
+            <div class="down-arrow" id="arrow"></div>
+          <div id="not-floorplan">
+            <div class="clear"></div>
+            
+            <div class="left-column">
+            	<div class="column-title"><%= @object.title %></div>
+                <div class="left-column-desc"><%= @object.description %></div>
+            </div>
+            
+            <div class="central-column">
+            	<div class="column-title">Inclusions:</div>
+                <div class="central-column-desc">
+                	<ul style="padding-left: 14px">
+                        <% for item in @object.inclusions_list.split(",") %> 
+                            <li><%= item %> </li>
+                        <% end %> 
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="right-column">
+            	<div class="column-title"><a href="contact-us.html">Contact Us</a></div>
+                
+                <p class="contact-us-info">P.O. Box 6567, Point Cook Vic. 3030<br />
+                                     Freecall: 1300 00 32 35<br />
+                                     E-mail: sales@elegantlivinghomes.com.au</p>
+            </div>
+
+          </div> <!-- non floorplan -->
+               
+          <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><img src="/images/Eudora-26-Fplan.jpg" width="960" /></div>
+</div> <!-- end container overview -->
+
+<script type="text/javascript">
+
+</script>
+
+<script type="text/javascript">
+ function show_floorplan(){
+     document.getElementById("not-floorplan").style.display = 'none';
+     document.getElementById("floorplan-shit").style.display = '';
+     document.getElementById("arrow").style.marginLeft = '180px';
+ }
+ function hide_floorplan(){
+     document.getElementById("not-floorplan").style.display = '';
+     document.getElementById("floorplan-shit").style.display = 'none';
+     document.getElementById("arrow").style.marginLeft = '20px';
+ }
+</script>

@@ -11,47 +11,85 @@
     </div>
   <% end %>
 
-  <div class="field">
+ 
+  <div id="container-form">
+    
+        <div class="form">
+            <h6>Title:</h6><%= f.text_field :title %>
+        </div>
+        
+        <div class="form-medium">
+            <h5>Lot No:</h5><%= f.text_field :lot_number %>
+        </div>
+        
+        <div class="form-medium">
+            <h5>Suburb:</h5><%= f.text_field :suburb %>
+        </div>
+        
+        <div class="form-medium">
+            <h5>Region:</h5><%= f.text_field :region %>
+        </div>
+        
+        <div class="form-medium">
+            <h5>Land Size:</h5><%= f.text_field :land_size %>
+        </div>
+        
+        <div class="form-medium">
+            <h5>Price:</h5><%= f.text_field :price %>
+        </div>
+        
+        <div class="form-medium">
+            <h5>Full T. Price:</h5><%= f.text_field :full_tk_price %>
+        </div>
+        
+        <div class="form-small">
+            <h5>Bedrooms:</h5><%= f.text_field :bedrooms %>
+        </div>
+        
+        <div class="form-small">
+            <h5>Bathrooms:</h5><%= f.text_field :bathrooms %>
+        </div>
+        
+        <div class="form-small">
+            <h5>Garage:</h5><%= f.text_field :car_parks %>
+        </div>
+       
+        
+    </div> <!-- end container form -->
+    
+    <div id="container-form">
+    
+        <div class="form">
+            <h6>Details List:</h6><%= f.text_field :feature_list %>
+        </div>
+        
+        <div class="form">
+            <h6>Overview Description:</h6><%= f.text_field :description %>
+        </div>
+        
+        <div class="form">
+            <h6>Full Turnkey Inclusions:</h6><%= f.text_field :full_tk_inclusions %>
+        </div>
+        
+        <div class="form-small">
+            <h5>Storeys:</h5><%= f.text_field :storeys %>
+        </div>
+        
+    </div> <!-- end container form -->
+
+  <div class="save-btn">
+    <%= f.submit %>
+  </div>
+
+   <div class="uploading-container">
+     <div class="field">
     <%= f.label :image %><br />
     <%= f.file_field :image %>
   </div>
-	<div class="field">
+  <div class="field">
     <%= f.label :pdf %><br />
     <%= f.file_field :pdf %>
+    <%= f.file_field :floorplan %>
   </div>
-  <div class="field">
-    <%= f.label :suburb %><br />
-    <%= f.text_field :suburb %>
-  </div>
-  <div class="field">
-    <%= f.label :heading %><br />
-    <%= f.text_field :heading %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :bathrooms %><br />
-    <%= f.text_field :bathrooms %>
-  </div>
-<div class="field">
-    <%= f.label :bedrooms %><br />
-    <%= f.text_field :bedrooms %>
-  </div>
-<div class="field">
-    <%= f.label :land_size %><br />
-    <%= f.text_field :land_size %>
-  </div>
-  <div class="field">
-    <%= f.label :storeys %><br />
-    <%= f.text_field :storeys %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+   </div>
 <% end %>
