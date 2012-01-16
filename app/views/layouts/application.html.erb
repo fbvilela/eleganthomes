@@ -7,15 +7,19 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div id="container">
-	<%= render :file => "shared/_header"%>
+	<div id="top-nav-bg"></div>
 	
+  <div id="container">
+	
+	<%= render :file => "shared/_header"%>
 	<div id="content">
 		<%= yield %>
 	</div>
-	
-	<%= render :file => "shared/_footer"%>
-	
+	<div id="content-shadow"></div>
+	<%= render :file => "shared/_first_footer"%>
   </div>
+  <div class="clear"></div>
+   <%= render :file => "shared/_bottom_footer" %>
+   
 </body>
 </html>

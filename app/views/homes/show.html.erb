@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= image_tag @home.image.url%></p>
+<p><%= image_tag @home.image.url(:thumb)%></p>
 <p>
   <b>Suburb:</b>
   <%= @home.suburb %>

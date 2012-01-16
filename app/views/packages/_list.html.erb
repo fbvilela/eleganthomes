@@ -1,11 +1,9 @@
 
-<div id="images-container">
- 
- <% @packages.each do |package| %>
+<div id="container-packages">
+  <% @packages.each do |package| %>
     <%= render :partial => "item" , :locals => { :package => package} %>
  <% end %>
 </div>
-<div style="float: right; padding-right: 30px; font-size: 1.2em;" ><%= paginate @packages %></div>
-<!-- We don't know what that div is closing. -->
-<!-- asdfasdfasdfasdfasdf-->
-</div> 
+<p class="pagination">
+  <%= paginate @packages %>
+</p>

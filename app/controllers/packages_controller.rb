@@ -2,7 +2,7 @@ class PackagesController < ApplicationController
   # GET /packages
   # GET /packages.xml
   def index
-    @packages = Package.page(params[:page]).per(6)
+    @packages = Package.page(params[:page]).per(8)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -35,6 +35,11 @@ class PackagesController < ApplicationController
   # GET /packages/1/edit
   def edit
     @package = Package.find(params[:id])
+  end
+
+  def details
+    @package = Package.find(params[:id])
+    render :layout => "detail"
   end
 
   # POST /packages

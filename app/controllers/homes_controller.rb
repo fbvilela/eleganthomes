@@ -1,6 +1,7 @@
 class HomesController < ApplicationController
   # GET /homes
   # GET /homes.xml
+  
   def index
     @homes = Home.all
 
@@ -8,6 +9,11 @@ class HomesController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @homes }
     end
+  end
+
+  def details 
+    @home = Home.find(params[:id])
+    render :layout => "detail"
   end
 
   # GET /homes/1

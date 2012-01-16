@@ -1,16 +1,16 @@
-<a href="#">
-            <p class="house-img">
-            	 <%= image_tag Image.last.url%>
-            </p>
-                <div class="container-info">
-                        <ul>
-                            <li class="title"><%= home.heading %></li>
-                            <li class="price">from <%= home.price %></li>
-                            <li class="square"><%= home.size %> Square</li>
-                        
-                        </ul>
-                    <p class="more-details-btn"></p>
-                 </div>
-      </a>
-
-
+<a href="<%= home_detail_url(home.id) %>">
+    <div class="package-thumb">
+        <div class="mask-package-img-thumb">
+            <div class="package-img-thumb">
+            <%= image_tag home.image.url(:thumb), :class => 'package-img' %>
+            <div class="bed-car-bath-icons">
+                <p class="number-of-bedrooms">3</p>
+                <p class="number-of-cars">2</p>
+                <p class="number-of-bath">2</p>
+            </div> <!-- end bed car bath icons -->
+        </div> <!-- end package img thumb -->
+    </div> <!-- and mask package img thumb -->
+    <p class="package-title"><%= home.heading %> </p>
+    <p class="package-price"><%= home.price %></p>
+  </div>
+</a> <!-- end package thumb -->

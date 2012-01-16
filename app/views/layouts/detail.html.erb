@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eleganthomes</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="top-nav-bg"></div>
+	
+  <div id="container">
+	
+	<%= render :file => "shared/_header"%>
+	<div id="content">
+		<%= yield %>
+	</div>
+
+	<div id="content-shadow"></div>
+	<%= render :file => "shared/_detailed_footer"%>
+
+  </div>
+
+  <div class="clear"></div>
+   <%= render :file => "shared/_bottom_footer" %>
+</body>
+
+</html>

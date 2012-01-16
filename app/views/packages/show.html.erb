@@ -14,7 +14,10 @@
   <b>Description:</b>
   <%= @package.description %>
 </p>
-
+<p>
+	<b>Image</b>
+	<%= image_tag @package.image.url(:thumb) %>
+</p>
 
 <%= link_to 'Edit', edit_package_path(@package) %> |
 <%= link_to 'Back', packages_path %>

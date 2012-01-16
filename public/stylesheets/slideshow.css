@@ -48,12 +48,12 @@
 	margin: 15px auto;
 }
 
-ul.menubar{
+.slideshow ul.menubar{
 	margin:0px;
 	padding:0px;
 }
 
-li{
+.slideshow li{
 	/* Every thumbnail is a li element */
 	width:24px;
 	display:inline-block;

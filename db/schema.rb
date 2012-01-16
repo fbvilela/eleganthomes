@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109120121) do
+ActiveRecord::Schema.define(:version => 20120115085147) do
+
+  create_table "albums", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "assets", :force => true do |t|
+    t.integer  "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "homes", :force => true do |t|
     t.string   "suburb"
@@ -27,6 +43,9 @@ ActiveRecord::Schema.define(:version => 20111109120121) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "car_parks"
+    t.integer  "bathrooms"
+    t.integer  "bedrooms"
   end
 
   create_table "images", :force => true do |t|
@@ -60,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20111109120121) do
     t.integer  "bedrooms"
     t.integer  "bathrooms"
     t.integer  "storeys"
+    t.integer  "car_parks"
   end
 
   create_table "page_part_translations", :force => true do |t|
