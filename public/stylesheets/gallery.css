@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.album-thumb{
+	display:inline;
+	float: left;
+	width: 155px;
+	height: 155px;
+	background: #fff;
+	margin: 15px 0 0 15px;
+	box-shadow: 0 0 3px #444444;
+	-webkit-box-shadow: 0 0 3px #444444;
+	-ms-box-shadow: 0 0 3px #444444;
+	-moz-box-shadow: 0 0 3px #444444;
+	-o-box-shadow: 0 0 3px #444444;
+	opacity: 0.9;
+}
+
+.album-thumb:hover{
+	opacity: 1;
+	box-shadow: 0 0 5px #333;
+	-webkit-box-shadow: 0 0 5px #333;
+	-ms-box-shadow: 0 0 5px #333;
+	-moz-box-shadow: 0 0 5px #333;
+	-o-box-shadow: 0 0 5px #333;
+}
+
+
+
+.album-mask{
+	display:block;
+	float: left;
+	width: 145px;
+	height: 110px;
+	margin: 5px;
+	overflow: hidden;
+}
+
+.title-album{
+	display: block;
+	float: left;
+	width: 145px;
+	font-size: 12px;
+	color:#125697;
+	margin: 0px 0 0 5px;
+	font-weight: bold;
+	line-height: 14px;
+	text-align: center;
+}
