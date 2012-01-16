@@ -13,7 +13,15 @@ development:
   host: localhost
   database: eleganthomes_development
   username: root
-  password: 
+  password:
+  
+
+production:
+  adapter: mysql2
+  host: localhost
+  database: eleganthomes_production
+  username: root
+  password: julian
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
