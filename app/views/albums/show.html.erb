@@ -1,18 +1,24 @@
-<p id="notice"><%= notice %></p>
+<script type="text/javascript">
+	$(function() {
+	   $('#photo-gallery a').lightBox();
+	});
+</script>
 
-<p>
-  <b>Name:</b>
-  <%= @album.name %>
-</p>
+<div class="content-top-bar">
+  	<p class="page-title"><span>elegant &nbsp;&nbsp; living &nbsp;&nbsp; homes - <%= @album.name %></span></p>
+</div>
+            
+            
+    <% for asset in @album.assets %> 
+    <div id="photo-gallery">
+        <div class="thumb">
+        	<div class="img-mask">
+            <%= link_to asset.image.url do %>
+               <%= image_tag asset.image.url(:thumb), :width=>"140" %>
+            <% end %> 
+            </div>
+        </div>
+    <% end %> 
+    
 
-<% for asset in @album.assets %>
-<p>
-	<%= image_tag asset.image.url(:thumb) %>
-</p>
-
-<% end %>
-
-
-
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+</div>

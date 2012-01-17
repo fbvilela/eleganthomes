@@ -1,0 +1,39 @@
+
+
+
+<div class="content-top-bar">
+	<p class="page-title"><span>We &nbsp;&nbsp; Welcome &nbsp;&nbsp; All &nbsp;&nbsp; Enquiries</span></p>   
+</div>
+
+			<div class="gooogle-maps">
+            	<iframe width="503" height="365" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.au/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=melbourne&amp;aq=&amp;sll=-25.335448,135.745076&amp;sspn=62.072022,114.169922&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Melbourne+Victoria&amp;t=m&amp;ll=-37.813361,144.962904&amp;spn=0.006611,0.009849&amp;z=16&amp;output=embed"></iframe>
+                
+            </div>
+            
+        
+            <div class="contact-right-column">
+                
+                <p class="page-desc">P.O. Box 6567, Point Cook Vic. 3030<br />
+                                     Freecall: 1300 00 32 35<br />
+                                     E-mail: sales@elegantlivinghomes.com.au</p>
+                
+                <%= form_tag "/send_inquiry" , :method => "post" do %>
+                <div class="form-contact">
+                    Your Name:<%= text_field :user, :name %><br />
+                    Your Email: <%= text_field :user, :email %><br />
+                    Subject: <%= text_field :user, :subject %>
+                </div>
+                
+                <div class="text-area">
+                    Message: <%= text_area :user, :message, :rows => 6 , :cols => 40 %>
+                </div>
+                
+                <div class="clear"></div>
+                <p> <%= flash[:notice] %></p> 
+                <p class="send-btn"><%= submit_tag "Send" %></p>
+                <% end %> 
+            </div>
+
+            
+            
+            

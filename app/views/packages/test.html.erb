@@ -1,0 +1,11 @@
+<html>
+<head> 
+<%= yield :head %>
+</head>
+<body>
+<%= gmaps(:markers     => { :data => Package.find(2).to_gmaps4rails },
+          :map_options => { :auto_adjust => true } ) %>
+</body>
+
+<%= yield :scripts %>
+</html>

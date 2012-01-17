@@ -1,23 +1,11 @@
-<h1>Listing albums</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @albums.each do |album| %>
-  <tr>
-    <td><%= album.name %></td>
-    <td><%= link_to 'Show', album %></td>
-    <td><%= link_to 'Edit', edit_album_path(album) %></td>
-    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Album', new_album_path %>
+<div class="content-top-bar">
+  <p class="page-title"><span>elegant &nbsp;&nbsp; living &nbsp;&nbsp; homes - gallery</span></p>
+</div>
+ <% for album in @albums %> 
+ <%= link_to album  do %>
+  <div class="album-thumb">
+   <div class="album-mask"><%= image_tag album.assets.first.image.url(:thumb) ,  :height => "110" %> </div>
+      <div class="title-album"><%= album.name %></div>
+   </div>
+  <% end %> 
+ <% end %> 

@@ -46,7 +46,7 @@ h2{
 
 
 
-.form{
+.form-contact{
 	display:block;
 	float:left;
 	width: 300px;
@@ -55,7 +55,7 @@ h2{
 	font-size: 12px;
 }
 
-.form input{
+.form-contact input{
 	width: 300px;	
 	background: #fff;
 	color: #333;

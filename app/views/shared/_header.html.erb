@@ -1,50 +1,50 @@
 <div id="top-nav-bar">
  <div class="btn">
-  <a href="index.html">
+  <a href="/index.html">
    <p class="btn"><span>HOME</span></p>
    <p class="btn-over"><span>HOME</span></p>
   </a>
 </div>
 
-<div class="btn"><a href="about-us.html">
+<div class="btn"><a href="/about-us.html">
 	<p class="btn"><span>ABOUT &nbsp;&nbsp;US</span></p>
 	<p class="btn-over"><span>ABOUT &nbsp;&nbsp;US</span></p>
 </a></div>
 
-<div class="btn"><a href="our-homes.html">
+<div class="btn"><%= link_to homes_path do %> 
 	<p class="btn"><span>OUR &nbsp;&nbsp;HOMES</span></p>
 	<p class="btn-over"><span>OUR &nbsp;&nbsp;HOMES</span></p>
-</a></div>
+<% end %></div>
 
-<div class="btn"><a href="home-and-land.html">
+<div class="btn"><%= link_to packages_path do %> 
 	<p class="btn"><span>HOME & LAND</span></p>
 	<p class="btn-over"><span>HOME & LAND</span></p>
-</a></div>
+<%end%></div>
 
-<div class="btn"><a href="renovations.html">
+<div class="btn"><a href="/renovations.html">
 	<p class="btn"><span>renovations</span></p>
 	<p class="btn-over"><span>renovations</span></p>
 </a></div>
 
-<div class="btn"><a href="unit-development.html">
+<div class="btn"><a href="/unit-development.html">
 	<p class="different-btn"><span>unit development</span></p>
 	<p class="different-btn-over"><span>unit development</span></p>
 </a></div>
 
-<div class="btn"><a href="gallery.html">
+<div class="btn"><%= link_to albums_path do %>
 	<p class="btn"><span>GALLERY</span></p>
 	<p class="btn-over"><span>GALLERY</span></p>
-</a></div>
+<% end %></div>
 
-<div class="btn"><a href="contact-us.html">
+<div class="btn"><%= link_to page_path("contact-us") do %>
 	<p class="btn"><span>CONTACT &nbsp;&nbsp;US</span></p>
 	<p class="btn-over"><span>CONTACT &nbsp;&nbsp;US</span></p>
-</a></div>
+<% end %></div>
             
 </div>
 
 <div id="sub-nav-bar">
-  <div id="logo"><a href="index.html">logo</a></div>
+  <div id="logo"><a href="/index.html">logo</a></div>
   <p id="info-number"><span>Call<br />1300 &nbsp;&nbsp; 003 &nbsp;&nbsp; 235</span></p>
 </div>
 

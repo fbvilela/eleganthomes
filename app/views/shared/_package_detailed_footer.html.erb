@@ -25,13 +25,16 @@
                 </div>
             </div>
             
-            <div class="google-maps"><iframe width="295" height="295" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.au/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=melbourne&amp;aq=&amp;sll=-25.335448,135.745076&amp;sspn=62.072022,114.169922&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Melbourne+Victoria&amp;t=m&amp;ll=-37.813361,144.962904&amp;spn=0.006611,0.009849&amp;z=16&amp;output=embed"></iframe></div>
+            <div class="google2-maps">
+              <%= gmaps("markers" => {"data" => @object.to_gmaps4rails}, "map_options" => {"processing" => "json", "auto_adjust" => true, "auto_zoom" => false, "zoom" => 15}) %>
+
+            </div>
 
           </div> <!-- non floorplan -->
                
           <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><img src="/images/Eudora-26-Fplan.jpg" width="960" /></div>
 </div> <!-- end container overview -->
-
+<%= yield :scripts %>
 <script type="text/javascript">
 
 </script>

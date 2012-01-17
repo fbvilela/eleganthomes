@@ -4,11 +4,13 @@ Eleganthomes::Application.routes.draw do
   resources :packages 
 
   resources :homes 
-  
+  match '/send_inquiry' => "mailer#send_inquiry"
+  match 'packages/:id/google/' => "packages#google"
   match 'packages/details/:id' => 'packages#details' , :as => :package_detail
 
   match 'homes/details/:id' => 'homes#details' , :as => :home_detail
 
+  
   #match "/pages/:id" => 'high_voltage/pages#show', :as => :page, :format => false, :layout => "page"
 
   # The priority is based upon order of creation:

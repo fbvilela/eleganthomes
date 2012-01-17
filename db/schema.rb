@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120116110912) do
+ActiveRecord::Schema.define(:version => 20120117084106) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -95,6 +95,8 @@ ActiveRecord::Schema.define(:version => 20120116110912) do
     t.string   "floorplan_content_type"
     t.integer  "floorplan_file_size"
     t.datetime "floorplan_updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "page_part_translations", :force => true do |t|

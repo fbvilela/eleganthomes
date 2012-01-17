@@ -9,6 +9,7 @@ gem 'mysql2', '< 0.3'
 gem 'paperclip'
 gem 'high_voltage'
 gem 'kaminari'
+gem 'gmaps4rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 

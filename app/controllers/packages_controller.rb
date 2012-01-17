@@ -1,6 +1,11 @@
 class PackagesController < ApplicationController
   # GET /packages
   # GET /packages.xml
+
+  def google
+    render "test", :layout => nil 
+  end
+  
   def index
     @packages = Package.page(params[:page]).per(8)
 
