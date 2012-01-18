@@ -13,7 +13,11 @@
 
  
   <div id="container-form">
-    
+        
+        <div class="form">
+            <h6>Home Name:</h6><%= f.text_field :name %>
+        </div>
+
         <div class="form">
             <h6>Title:</h6><%= f.text_field :title %>
         </div>
@@ -59,27 +63,26 @@
     
     <div id="container-form">
     
-        <div class="form">
-            <h6>Details List:</h6><%= f.text_field :feature_list %>
+        <div class="form-text-area">
+            <h6>Details List: (separate by comma)</h6><%= f.text_area :feature_list, :rows => 4 , :cols => 40, :style=>"width: 270px; height: 70px;", :value => "Separate values by comma." %> 
         </div>
         
-        <div class="form">
-            <h6>Overview Description:</h6><%= f.text_field :description %>
+        <div class="form-text-area">
+            <h6>Overview Description:</h6><%= f.text_area :description, :rows => 4 , :cols => 40, :style=>"width: 270px; height: 70px;" %> 
         </div>
         
-        <div class="form">
-            <h6>Full Turnkey Inclusions:</h6><%= f.text_field :full_tk_inclusions %>
+        <div class="form-text-area">
+            <h6>Full Turnkey Inclusions: (separate by comma)</h6><%= f.text_area :full_tk_inclusions, :rows => 4 , :cols => 40, :style=>"width: 270px; height: 70px;" %> 
         </div>
-        
-        <div class="form-small">
-            <h5>Storeys:</h5><%= f.text_field :storeys %>
+        <div class="form">
+            <h5>Address: </h5><%= f.text_field :address %>
         </div>
         
     </div> <!-- end container form -->
 
-  <div class="save-btn">
-    <%= f.submit %>
-  </div>
+  
+    
+  
 
    <div class="uploading-container">
      <div class="field">
@@ -87,9 +90,11 @@
     <%= f.file_field :image %>
   </div>
   <div class="field">
-    <%= f.label :pdf %><br />
-    <%= f.file_field :pdf %>
+    <%= f.label :floorplan %><br /> 
     <%= f.file_field :floorplan %>
+    <%= f.label :pdf %><br /> 
+    <%= f.file_field :pdf %>
   </div>
+  <%= f.submit %>
    </div>
 <% end %>

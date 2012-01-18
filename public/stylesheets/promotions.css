@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-#photo-gallery{
+#photo-gallery-promo{
 	display:inline;
 	float:left;
 	width: 198px;
@@ -12,7 +12,7 @@
 }
 
 
-.thumb{
+.thumb-promo{
 	display: inline;
 	float:left;
 	width:198px;
@@ -28,7 +28,7 @@
 	opacity: 0.9;
 }
 
-.thumb:hover{
+.thumb-promo:hover{
 	opacity: 1;
 	box-shadow: 0 0 5px #333;
 	-webkit-box-shadow: 0 0 5px #333;
@@ -36,9 +36,9 @@
 	-moz-box-shadow: 0 0 5px #333;
 	-o-box-shadow: 0 0 5px #333;
 }
+*/
 
-
-.enlarge{
+#enlarge{
 	display:block;
 	float: left;
 	margin: 20px 0 0 50px;

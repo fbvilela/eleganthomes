@@ -2,7 +2,11 @@
           
         	<div class="overview-btn"><a href="#container-overview" onClick="hide_floorplan();"><span>OVERVIEW</span></a></div>
             <div class="overview-btn"><a href="#container-overview" onClick="show_floorplan();"><span>FLOORPLAN</span></a></div>
-            <div class="go-back-btn"><a href="home-and-land.html"><span>< GO BACK</span></a></div>
+            <div class="go-back-btn">
+                <%= link_to packages_path do %>
+                   <span>< GO BACK</span>
+                <% end %>
+            </div>
             <div class="clear"></div>
             <div class="down-arrow" id="arrow"></div>
           <div id="not-floorplan">
@@ -14,7 +18,7 @@
             </div>
             
             <div class="central-column-homes">
-            	<div class="central-column-title">Full Turnkey Also Available From: $<%= @object.full_tk_price %></div>
+            	<div class="central-column-title">Full Turnkey Also <br/> Available From: <%= number_to_currency(@object.full_tk_price, :locale => :au, :precision => 0) %></div>
                 <div class="central-column-desc-title">Full Turnkey includes:</div>
                 <div class="central-column-desc">
                 	<ul style="padding-left: 14px">
@@ -32,7 +36,7 @@
 
           </div> <!-- non floorplan -->
                
-          <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><img src="/images/Eudora-26-Fplan.jpg" width="960" /></div>
+          <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><%= image_tag @object.floorplan.url,  :width=>"960" %></div>
 </div> <!-- end container overview -->
 <%= yield :scripts %>
 <script type="text/javascript">

@@ -9,7 +9,7 @@
             
             <div class="container-details">
             	<div class="home-and-land-title"><%= @home.title %> </div>
-             	<div class="home-and-land-price">Price: <br /> $<%= @home.price %></div>
+             	<div class="home-and-land-price">Price: <br /> <%= number_to_currency(@home.price, :locale => :au, :precision => 0) %></div>
               
              	<div class="container-icons">
               		<img src="/images/bed-icon.png" width="50" height="50" class="little-icon" />

@@ -9,16 +9,15 @@
 </div>
             
             
-    <% for asset in @album.assets %> 
-    <div id="photo-gallery">
+    
+<div id="photo-gallery">
+     <% for asset in @album.assets %> 
         <div class="thumb">
         	<div class="img-mask">
-            <%= link_to asset.image.url do %>
-               <%= image_tag asset.image.url(:thumb), :width=>"140" %>
-            <% end %> 
+                    <%= link_to asset.image.url do %>
+                       <%= image_tag asset.image.url(:thumb), :width=>"140" %>
+                    <% end %> 
             </div>
-        </div>
-    <% end %> 
-    
-
+      </div>
+    <% end %>
 </div>

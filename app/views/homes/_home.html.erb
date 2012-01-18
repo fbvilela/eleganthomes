@@ -4,13 +4,13 @@
             <div class="package-img-thumb">
             <%= image_tag home.image.url(:thumb), :class => 'package-img' %>
             <div class="bed-car-bath-icons">
-                <p class="number-of-bedrooms">3</p>
-                <p class="number-of-cars">2</p>
-                <p class="number-of-bath">2</p>
+                <p class="number-of-bedrooms"><%= home.bedrooms %></p>
+                <p class="number-of-cars"><%= home.car_parks%></p>
+                <p class="number-of-bath"><%= home.bathrooms %></p>
             </div> <!-- end bed car bath icons -->
         </div> <!-- end package img thumb -->
     </div> <!-- and mask package img thumb -->
     <p class="package-title"><%= home.title %> </p>
-    <p class="package-price"><%= home.price %></p>
+    <p class="package-price">From: <%= number_to_currency(home.price, :locale => :au, :precision => 0) %></p>
   </div>
 </a> <!-- end package thumb -->

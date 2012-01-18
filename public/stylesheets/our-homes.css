@@ -156,15 +156,16 @@
 .package-title{
 	display: block;
 	margin: 5px 0 0 5px;
-	font-size: 16px;
+	font-size: 11px;
 	font-weight: bold;
 	color: #125697;
+	line-height: 12px;
 }
 
 .package-price{
 	display: block;
 	margin: -5px 0 0 5px;
-	font-size: 12px;
+	font-size: 11px;
 	color: #666;
 }
 
@@ -175,8 +176,12 @@
 	float: right;
 	margin: 15px 80px 0 0;
 	color:#125697;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: bold;
+}
+
+.pagination span {
+	padding-left:10px;
 }
 
 

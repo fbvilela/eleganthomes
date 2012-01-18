@@ -252,12 +252,12 @@
 ul{
 	display:block;
 	float: left;
-	width: 200px;
+	width: 270px;
 }
 
 ul li{
 	color: #333;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 

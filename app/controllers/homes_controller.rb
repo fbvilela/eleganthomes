@@ -3,7 +3,7 @@ class HomesController < ApplicationController
   # GET /homes.xml
   
   def index
-    @homes = Home.all
+    @homes = Home.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -50,7 +50,7 @@ class HomesController < ApplicationController
 
     respond_to do |format|
       if @home.save
-        format.html { redirect_to(@home, :notice => 'Home was successfully created.') }
+        format.html { redirect_to(homes_path, :notice => 'Home was successfully created.') }
         format.xml  { render :xml => @home, :status => :created, :location => @home }
       else
         format.html { render :action => "new" }
@@ -66,7 +66,7 @@ class HomesController < ApplicationController
 
     respond_to do |format|
       if @home.update_attributes(params[:home])
-        format.html { redirect_to(@home, :notice => 'Home was successfully updated.') }
+        format.html { redirect_to(homes_path, :notice => 'Home was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

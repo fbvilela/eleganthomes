@@ -1,7 +1,8 @@
 <div class="content-top-bar">
- 	<p class="page-title"><span>Range &nbsp;&nbsp; of &nbsp;&nbsp; Homes</span></p>
+ 	<p class="page-title"><span>Elegant &nbsp;&nbsp; Living &nbsp;&nbsp; Homes - Range &nbsp;&nbsp; of &nbsp;&nbsp; Homes</span></p>
 </div>
 
 <div id="container-homes">
   <%= render :partial => "home" , :collection => @homes %>
 </div>
+<%= paginate @homes %>

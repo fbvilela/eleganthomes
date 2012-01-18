@@ -3,7 +3,11 @@
           
         	<div class="overview-btn"><a href="#container-overview" onClick="hide_floorplan();"><span>OVERVIEW</span></a></div>
             <div class="overview-btn"><a href="#container-overview" onClick="show_floorplan();"><span>FLOORPLAN</span></a></div>
-            <div class="go-back-btn"><a href="home-and-land.html"><span>< GO BACK</span></a></div>
+            <div class="go-back-btn">
+                <%= link_to homes_path do %>
+                   <span>< GO BACK</span>
+                <% end %>
+            </div>
             <div class="clear"></div>
             <div class="down-arrow" id="arrow"></div>
           <div id="not-floorplan">
@@ -35,7 +39,7 @@
 
           </div> <!-- non floorplan -->
                
-          <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><img src="/images/Eudora-26-Fplan.jpg" width="960" /></div>
+          <div class="floorplan-container" id="floorplan-shit" style="display: none;" ><%= image_tag @object.floorplan.url,  :width=>"960" %></div>
 </div> <!-- end container overview -->
 
 <script type="text/javascript">
