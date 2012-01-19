@@ -1,12 +1,18 @@
 Eleganthomes::Application.routes.draw do
-  resources :albums
+  resources :albums do 
+    resources :assets 
+  end
 
+   match '/packages/search' => "packages#search", :as => :package_search
   resources :packages 
 
+ 
   resources :homes 
   match '/send_inquiry' => "mailer#send_inquiry"
   match 'packages/:id/google/' => "packages#google"
   match 'packages/details/:id' => 'packages#details' , :as => :package_detail
+
+  
 
   match 'homes/details/:id' => 'homes#details' , :as => :home_detail
 

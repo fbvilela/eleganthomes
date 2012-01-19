@@ -1,14 +1,13 @@
 <div id="container-search">
+  <%= form_tag "/packages/search", :method => :get do %> 
     <p class="search-title">Selection Wizard</p>
                <div class="selection">
                     <p class="select-title">Price:</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
+                    
+                    <%= select_tag :price_from, options_for_select( prices_range_options_from ) %>
                     <p class="to">to</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
+                    <%= select_tag :price_to, options_for_select( prices_range_options_to ) %>
+                     
                 </div> <!-- end selection -->
                 
                 <div class="selection">
@@ -56,10 +55,10 @@
 
                 <div class="search-btn-mask"><a href="#">
                     <div class="search-btn">
-                        <p class="search-btn">Search ></p>
+                        <p class="search-btn"><%= submit_tag %></p>
                         <p class="search-btn-over">Search ></p>
                     </div>
                 </a></div> 
-                
+ <% end %> 
 </div> <!-- end container-search -->
 

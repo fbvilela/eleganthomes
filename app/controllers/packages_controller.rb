@@ -2,8 +2,9 @@ class PackagesController < ApplicationController
   # GET /packages
   # GET /packages.xml
 
-  def google
-    render "test", :layout => nil 
+  def search
+    @packages = Package.where("price >= ? and price <= ?", params[:price_from], params[:price_to]).page(params[:page]).per(8)
+    render "index"
   end
   
   def index

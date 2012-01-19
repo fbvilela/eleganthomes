@@ -14,7 +14,7 @@
      <% for asset in @album.assets %> 
         <div class="thumb">
         	<div class="img-mask">
-                    <%= link_to asset.image.url do %>
+                    <%= link_to asset.image.url(:medium) do %>
                        <%= image_tag asset.image.url(:thumb), :width=>"140" %>
                     <% end %> 
             </div>

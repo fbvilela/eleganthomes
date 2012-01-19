@@ -17,12 +17,26 @@
   </div>
   
   <% f.fields_for :assets do |asset| %>
+    
+    <% if asset.object.image_file_name.blank? %>
  	  	<div class="field">
-	    	<%= asset.file_field :image %>
+	    	<%= asset.file_field :image %> 
 	  	</div>
+    <% end %>
   <% end %>
   
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<div>
+<ul> 
+<% for asset in @album.assets %> 
+  
+  <% if false  %>
+   <li> <% asset.image_file_name %> <%= link_to "Delete",  album_asset_path(@album,asset) , :confirm => "Are you Sure?", :method => :delete %> </li>
+  <% end %> 
+<% end %> 
+</ul>
+</div>

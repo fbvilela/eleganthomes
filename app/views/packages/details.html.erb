@@ -22,7 +22,9 @@
                   <% for info in @package.feature_list.split(",") %>
                     <div class="extra-info">- <%= info %></div>
                   <% end %> 
-                    <div class="extra-info">- Land Size: <%= @package.land_size %>m2</div>
+                    <% unless @package.land_size.blank? %> 
+                       <div class="extra-info">- Land Size: <%= @package.land_size %>m2</div>
+                    <% end %> 
                   
               	</div> <!-- end container icons  -->
                 

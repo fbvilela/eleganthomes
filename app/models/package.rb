@@ -12,7 +12,7 @@ class Package < ActiveRecord::Base
   acts_as_gmappable :process_geocoding => true, :check_process => false
 
 	def gmaps4rails_address
-		self.address || "Melbourne, Australia"
+		self.address.blank? ? "Melbourne, Vic, 3000" : self.address
 		#describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
   		#"#{self.lot_number}, #{self.city}, #{self.country}" 
 	end
