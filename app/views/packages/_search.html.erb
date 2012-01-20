@@ -1,64 +1,39 @@
 <div id="container-search">
-  <%= form_tag "/packages/search", :method => :get do %> 
+  <%= form_tag "/packages/search", :method => :post , :name => "search" do %> 
     <p class="search-title">Selection Wizard</p>
                <div class="selection">
                     <p class="select-title">Price:</p>
-                    
                     <%= select_tag :price_from, options_for_select( prices_range_options_from ) %>
                     <p class="to">to</p>
                     <%= select_tag :price_to, options_for_select( prices_range_options_to ) %>
-                     
                 </div> <!-- end selection -->
                 
                 <div class="selection">
                     <p class="select-title">Land Size:</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
+                    <%= select_tag :land_size_from, options_for_select( land_size_options_from ) %>
                     <p class="to">to</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
+                    <%= select_tag :land_size_to, options_for_select( land_size_options_to ) %>
                 </div> <!-- end selection -->
-                
-                <div class="selection">
-                
-                    <p class="select-title">Bedrooms:</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
-                </div> <!-- end selection -->
-                
-                <div class="selection">
-                
-                    <p class="select-title">Storeys:</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
-                </div> <!-- end selection -->
-                
-                <div class="selection">
-                    <p class="select-title">Region:</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
-                </div> <!-- end selection -->
-                
+                                
                 <div class="selection">
                     <p class="select-title">Suburb:</p>
-                    <select>
-                        <option>Any</option>
-                    </select>
+                    <%= select_tag :suburb, options_for_select( suburb_options ) , :style => "width: 140px"%>
                 </div> <!-- end selection -->
                 
+                <div class="selection">
+                <p class="select-title">Bedrooms:</p>
+                    <%= select_tag :bedrooms, options_for_select( bedrooms_options ) %>
+                </div> <!-- end selection -->
+
                 <div class="clear"></div>
 
-                <div class="search-btn-mask"><a href="#">
+                <div class="search-btn-mask"><a href="#" onClick="document.search.submit();">
                     <div class="search-btn">
-                        <p class="search-btn"><%= submit_tag %></p>
+                        <p class="search-btn">Search ></p>
                         <p class="search-btn-over">Search ></p>
                     </div>
-                </a></div> 
+                </a></div>
+                
  <% end %> 
 </div> <!-- end container-search -->
 

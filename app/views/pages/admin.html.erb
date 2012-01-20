@@ -1,0 +1,152 @@
+<div id="updating-title"><%= flash[:notice] %></div>
+  	<div class="admin-column">
+
+      <div class="title-admin">Packages</div>
+      <div id="scroll-box">
+      <% for package in Package.all %> 
+        <div class="row">
+          <div class="title-element"><%= package.title %></div>
+          <div class="ed-btn"><%= link_to "Edit", edit_package_path(package) %></div>
+          <div class="ed-btn"><%= link_to "Delete", package , :method => :delete, :confirm => "Are you sure?"%></div>
+        </div>
+        <% end %> 
+      </div> <!-- end scroll box -->
+      <div class="create-new"><%= link_to "Create New Package" , new_package_path %></div>
+    </div>
+    
+    <div class="admin-column">
+      <div class="title-admin">Albums</div>
+      <div id="scroll-box">
+        
+        <% for album in Album.all %> 
+        <div class="row">
+          <div class="title-element"><%= album.name %></div>
+          <div class="ed-btn"><%= link_to "Edit", edit_album_path(album) %></div>
+          <div class="ed-btn"><%= link_to "Delete", album, :method => :delete, :confirm => "Are you sure?" %></div>
+        </div>
+        <% end %>
+      </div> <!-- end scroll box -->
+      <div class="create-new"><%= link_to "Create New Album", new_album_path %></div>
+
+</div>
+
+<style>
+  a { color: #fff; text-decoration: none; outline: none; }
+</style>
+  
+<style>
+  #admin-content{
+    display:block;
+    background: url(images/content-bg.gif) repeat-x;
+    width: 960px;
+    height: 450px;
+    box-shadow: 0 1px 5px #000;
+    -webkit-box-shadow: 0 1px 5px #000;
+    -ms-box-shadow: 0 1px 5px #000;
+    -moz-box-shadow: 0 1px 5px #000;
+    -o-box-shadow: 0 1px 5px #000;
+    margin: 0 auto;
+  }
+</style>
+  
+<style>
+  .admin-column{
+    display:inline;
+    float:left;
+    width: 450px;
+    height:395px;
+    margin: 15px 0 0 15px;
+  }
+</style>
+
+<style>
+  #scroll-box{
+    display:block;
+    float:left;
+    width: 450px;
+    height:280px;
+    margin: 20px 0 0 0;
+    overflow: scroll;
+  }
+</style>
+
+<style>
+  .title-admin{
+    display:block;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 24px;
+    color: #666;
+  }
+</style>
+
+<style>
+  .row{
+    display:block;
+    float:left;
+    width: 430px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #999;
+  }
+</style>
+
+<style>
+  .row:Hover{
+    background: #FFF;
+  }
+</style>
+
+
+<style>
+  .title-element{
+    display:inline;
+    float:left;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 280px;
+    margin-left: 10px;
+    color:#666;
+    cursor:default;
+  }
+</style>
+
+<style>
+  .ed-btn{
+    display:inline;
+    float:left;
+    background:#999;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 60px;
+    margin-left: 10px;
+    font-size:14px;
+  }
+</style>
+
+
+<style>
+  .create-new{
+    display:block;
+    float:left;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 180px;
+    font-size:18px;
+    padding: 5px;
+    color:#FFF;
+    text-align:center;
+    background: #125697;
+    margin: 20px 0 0 0;
+  }
+</style>
+
+
+<style>
+  #updating-title{
+    display:block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #093;
+    padding-top: 15px;
+  }
+</style>

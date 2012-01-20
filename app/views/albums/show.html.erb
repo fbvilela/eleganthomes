@@ -11,7 +11,7 @@
             
     
 <div id="photo-gallery">
-     <% for asset in @album.assets %> 
+     <% for asset in @assets %> 
         <div class="thumb">
         	<div class="img-mask">
                     <%= link_to asset.image.url(:medium) do %>
@@ -21,3 +21,4 @@
       </div>
     <% end %>
 </div>
+<%= paginate @assets %>

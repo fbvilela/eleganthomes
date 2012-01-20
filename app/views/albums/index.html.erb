@@ -1,11 +1,14 @@
 <div class="content-top-bar">
   <p class="page-title"><span>elegant &nbsp;&nbsp; living &nbsp;&nbsp; homes - gallery</span></p>
 </div>
+ <div id="photo-gallery"> 
  <% for album in @albums %> 
  <%= link_to album  do %>
   <div class="album-thumb">
-   <div class="album-mask"><%= image_tag album.assets.first.image.url(:thumb) ,  :height => "110" %> </div>
+   <div class="album-mask"><%= image_tag album.assets.first.image.url(:thumb) ,  :height => "110" unless album.assets.blank? %> </div>
       <div class="title-album"><%= album.name %></div>
    </div>
   <% end %> 
  <% end %> 
+ </div>
+ <%= paginate @albums %> 

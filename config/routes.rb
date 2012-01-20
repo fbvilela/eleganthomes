@@ -3,7 +3,9 @@ Eleganthomes::Application.routes.draw do
     resources :assets 
   end
 
-   match '/packages/search' => "packages#search", :as => :package_search
+  match '/admin'  => "admin#check_login"
+  match '/remove_asset/:id'  => "assets#destroy", :as => :remove_asset
+  match '/packages/search' => "packages#search", :as => :package_search
   resources :packages 
 
  

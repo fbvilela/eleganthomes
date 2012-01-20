@@ -1,8 +1,11 @@
 class AlbumsController < ApplicationController
+  
+  before_filter :authentication_check , :only => [:new, :edit]
+
   # GET /albums
   # GET /albums.xml
   def index
-    @albums = Album.all
+    @albums = Album.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +17,7 @@ class AlbumsController < ApplicationController
   # GET /albums/1.xml
   def show
     @album = Album.find(params[:id])
-
+    @assets = @album.assets.page(params[:page]).per(21)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @album }
@@ -46,7 +49,8 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to(@album, :notice => 'Album was successfully created.') }
+        flash[:notice] = "Album was successfully created."
+        format.html { redirect_to( page_path("admin") ) }
         format.xml  { render :xml => @album, :status => :created, :location => @album }
       else
         format.html { render :action => "new" }
@@ -62,7 +66,8 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.update_attributes(params[:album])
-        format.html { redirect_to(@album, :notice => 'Album was successfully updated.') }
+        flash[:notice] = 'Album was successfully updated.'
+        format.html { redirect_to(page_path("admin") ) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +83,8 @@ class AlbumsController < ApplicationController
     @album.destroy
 
     respond_to do |format|
-      format.html { redirect_to(albums_url) }
+      flash[:notice] = "Album successfully removed."
+      format.html { redirect_to(page_path("admin") ) }
       format.xml  { head :ok }
     end
   end
