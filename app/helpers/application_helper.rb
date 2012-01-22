@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def land_size_options_from
-    [ ["Any", ""] , ["300", "300m2"], ["400", "400m2"], ["500", "500m2"], ["600", "600m2"] ]
+    [ ["Any", ""] , ["300m2", "300"], ["400m2", "400"], ["500m2", "500"], ["600m2", "600"] ]
   end
 
   def land_size_options_to

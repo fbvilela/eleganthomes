@@ -1,9 +1,11 @@
+<%= javascript_include_tag "jquery.js" %>
+<%= javascript_include_tag "jquery.lightbox-0.5.min.js" %>
+
 <script type="text/javascript">
 	$(function() {
 	   $('#photo-gallery a').lightBox();
 	});
 </script>
-
 <div class="content-top-bar">
   	<p class="page-title"><span>elegant &nbsp;&nbsp; living &nbsp;&nbsp; homes - <%= @album.name %></span></p>
 </div>
