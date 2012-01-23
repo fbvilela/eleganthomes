@@ -30,12 +30,12 @@ class PackagesController < ApplicationController
     conditions_string << "lower(suburb) = lower('#{params[:suburb]}')" unless params[:suburb].blank?
     #conditions_params << params[:suburb].downcase unless params[:suburb].blank?
 
-    @packages = Package.where(conditions_string.join(" and ")).page(params[:page]).per(8)
+    @packages = Package.where(conditions_string.join(" and ")).order(:land_size).page(params[:page]).per(8)
     render "index"
   end
   
   def index
-    @packages = Package.page(params[:page]).per(8)
+    @packages = Package.order(:land_size).page(params[:page]).per(8)
 
     respond_to do |format|
       format.html # index.html.erb

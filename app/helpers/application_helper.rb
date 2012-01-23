@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def bedrooms_options
-  	[ ["Any", ""] , ["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"] ]
+  	[ ["Any", ""] , ["3", "3"], ["4", "4"], ["5", "5"] ]
   end
 
   def storeys_options
