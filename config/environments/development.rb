@@ -24,6 +24,19 @@ Eleganthomes::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :port => 587,
+  :address              => "mail.elegantlivinghomes.com.au",
+  :domain               => 'elegantlivinghomes.com.au',
+  :user_name            => 'website@elegantlivinghomes.com.au',
+  :password             => 'elegant12',
+  :authentication       => :login,
+  :enable_starttls_auto => false
+   }
+
+   config.action_mailer.raise_delivery_errors = true
+   config.action_mailer.perform_deliveries = true
+   config.action_mailer.default_charset = 'utf-8'
 
 
 end
