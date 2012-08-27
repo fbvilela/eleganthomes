@@ -8,7 +8,7 @@
 #   gem install pg
 #       Choose the win32 build.
 #       Install PostgreSQL and put its /bin directory on your path.
-development:
+development_old:
   adapter: mysql2
   host: localhost
   database: eleganthomes_development
@@ -22,6 +22,13 @@ production:
   database: eleganthomes_production
   username: root
   password: julian
+
+
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have

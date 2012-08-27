@@ -1,7 +1,8 @@
 class HomesController < ApplicationController
   # GET /homes
   # GET /homes.xml
-  
+  # 
+
   def index
     @homes = Home.page(params[:page]).per(10)
 
@@ -33,7 +34,9 @@ class HomesController < ApplicationController
     @home = Home.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html {
+        render :layout => 'bootstrap'
+      } # new.html.erb
       format.xml  { render :xml => @home }
     end
   end

@@ -1,0 +1,12 @@
+development:
+  bucket: elegant-dev
+  access_key_id: AKIAIUYGD5A27Y3N5I4Q
+  secret_access_key: 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
+test:
+  bucket: bucket-test
+  access_key_id: AKIAIUYGD5A27Y3N5I4Q
+  secret_access_key: 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
+production:
+  bucket: elegant-production
+  access_key_id: AKIAIUYGD5A27Y3N5I4Q
+  secret_access_key: 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
