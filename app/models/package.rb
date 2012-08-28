@@ -2,7 +2,7 @@ class Package < ActiveRecord::Base
    has_attached_file :image, :styles => { :thumb => "145x105>" }, 
    :storage => :s3,
    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-   :path => ":/packages/:id/:style/:basename.:extension"
+   :path => "/packages/:id/:style/:basename.:extension"
 
    has_attached_file :pdf , 
    :storage => :s3,

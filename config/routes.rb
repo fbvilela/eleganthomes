@@ -1,4 +1,6 @@
 Eleganthomes::Application.routes.draw do
+  resources :promotions
+
   resources :albums do 
     resources :assets 
   end
