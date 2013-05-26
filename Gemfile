@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,8 +11,8 @@ gem 'high_voltage'
 gem 'kaminari'
 gem 'gmaps4rails'
 gem 'heroku'
-#gem 'pg'
-gem 'sqlite3'
+gem 'pg'
+#gem 'sqlite3'
 gem 'aws-sdk'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'

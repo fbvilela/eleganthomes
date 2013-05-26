@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828100139) do
+ActiveRecord::Schema.define(:version => 20120118130318) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "assets", :force => true do |t|
     t.integer  "album_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20120828100139) do
     t.text     "feature_list"
     t.text     "description"
     t.integer  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(:version => 20120828100139) do
     t.string   "suburb"
     t.string   "title"
     t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -87,21 +87,6 @@ ActiveRecord::Schema.define(:version => 20120828100139) do
     t.float    "longitude"
     t.string   "name"
     t.string   "address"
-  end
-
-  create_table "promotions", :force => true do |t|
-    t.string   "heading"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "pdf_file_name"
-    t.string   "pdf_content_type"
-    t.integer  "pdf_file_size"
-    t.datetime "pdf_updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
   end
 
 end
