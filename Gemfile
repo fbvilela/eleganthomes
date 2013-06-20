@@ -5,14 +5,20 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
+gem 'jquery-rails'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'high_voltage'
 gem 'kaminari'
 gem 'gmaps4rails'
 gem 'heroku'
-gem 'pg'
-# gem 'sqlite3'
+
+group :production do 
+  gem 'pg'
+end
+group :development do 
+  gem 'sqlite3'
+end
+
 gem 'aws-sdk'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
